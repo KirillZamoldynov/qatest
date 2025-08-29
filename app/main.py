@@ -55,7 +55,7 @@ app = FastAPI(
 app.add_exception_handler(AppException, app_exception_handler)
 app.add_exception_handler(Exception, general_exception_handler)
 
-# Настройка CORS
+# Настройка CORS (в prod нужно будет изменить подход)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
